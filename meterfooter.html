@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>meterfooter</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>meter</th>
+        <th>feet</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="m" name="m1" placeholder="nhập meter" oninput="feetConvert()"></td>
+       <td><input type="text" id="f" name="f1" placeholder="nhập feet" oninput="meterConvert()"></td>
+    </tr>
+    <tr>
+        <td><div id ="resultM"></div></td>
+        <td><div id ="resultF"></div></td>
+    </tr>
+</table>
+
+
+<script>
+    // cần xem lại cái này
+    // let meter = document.getElementById("m");
+    // let feet;
+    // let resultf;
+    // let resultm;
+    //
+    // function feetConvert() {
+    //     m = parseFloat(meter.value);
+    //     resultf = m / 0.305;
+    //     return resultf;
+    // }
+    //
+    // function meterConvert() {
+    //     feet = parseFloat(document.getElementById("f").value);
+    //     resultm = feet / 3.279;
+    //     return resultm;
+    // }
+    // document.getElementById("resultM").innerHTML = (meterConvert() + " meter");
+    // document.getElementById("resultF").innerHTML = (feetConvert() + " feet");
+    // feetConvert();
+    // meterConvert();
+    let meter;
+    let feet;
+    let resultf;
+    let resultm;
+    function feetConvert() {
+        meter = +document.getElementById("m").value;
+        resultf = meter / 0.305;
+        document.getElementById("resultM").innerHTML = resultf + " meter";
+        return resultf;
+    }
+    function meterConvert() {
+        feet = +document.getElementById("f").value;
+        resultm = feet / 3.279;
+        document.getElementById("resultF").innerHTML = resultm + " feet";
+        return resultm;
+    }
+</script>
+</body>
+</html>
